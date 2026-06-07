@@ -1,0 +1,276 @@
+====================================
+SHAPIRO-WILK TESTS
+====================================
+
+$`100`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.88519, p-value = 0.002248
+
+
+$`106`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.83263, p-value = 0.0006672
+
+
+$`120`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.86742, p-value = 0.002145
+
+
+$`123`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.67111, p-value = 3.049e-06
+
+
+$`141`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.98355, p-value = 0.9389
+
+
+$`145`
+
+	Shapiro-Wilk normality test
+
+data:  results_list[[s]]$cement_ratio
+W = 0.9351, p-value = 0.083
+
+
+
+
+KRUSKAL-WALLIS TEST
+====================================
+
+
+	Kruskal-Wallis rank sum test
+
+data:  cement_ratio by Sample
+Kruskal-Wallis chi-squared = 77.938, df = 5, p-value = 2.265e-15
+
+
+
+PAIRWISE WILCOXON TESTS
+====================================
+
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  all_data$cement_ratio and all_data$Sample 
+
+    100     106     120     123     141    
+106 0.435   -       -       -       -      
+120 0.472   0.213   -       -       -      
+123 0.082   0.295   0.066   -       -      
+141 8.0e-05 4.2e-05 0.022   5.9e-06 -      
+145 5.4e-09 1.2e-08 1.4e-07 2.9e-08 3.9e-06
+
+P value adjustment method: BH 
+
+
+LINEAR MODELS
+====================================
+
+$`100`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.40085 -0.09353 -0.04178  0.07553  0.45520 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 23.934239   6.587569   3.633  0.00100 **
+Year        -0.011820   0.003282  -3.601  0.00109 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1795 on 31 degrees of freedom
+Multiple R-squared:  0.2949,	Adjusted R-squared:  0.2722 
+F-statistic: 12.97 on 1 and 31 DF,  p-value: 0.001091
+
+
+$`106`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.1896 -0.1603 -0.0679  0.1200  0.5113 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)  2.818436  10.796786   0.261    0.796
+Year        -0.001316   0.005370  -0.245    0.809
+
+Residual standard error: 0.2054 on 24 degrees of freedom
+Multiple R-squared:  0.002495,	Adjusted R-squared:  -0.03907 
+F-statistic: 0.06003 on 1 and 24 DF,  p-value: 0.8085
+
+
+$`120`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.51150 -0.11179 -0.01598  0.14233  0.43682 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 34.066394  11.586003   2.940  0.00680 **
+Year        -0.016811   0.005766  -2.916  0.00721 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2464 on 26 degrees of freedom
+Multiple R-squared:  0.2464,	Adjusted R-squared:  0.2174 
+F-statistic: 8.502 on 1 and 26 DF,  p-value: 0.007214
+
+
+$`123`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.28912 -0.10313 -0.01149  0.03302  0.58148 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 26.845745  10.927169   2.457   0.0220 *
+Year        -0.013285   0.005434  -2.445   0.0226 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1959 on 23 degrees of freedom
+Multiple R-squared:  0.2063,	Adjusted R-squared:  0.1718 
+F-statistic: 5.978 on 1 and 23 DF,  p-value: 0.02256
+
+
+$`141`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.47682 -0.14698  0.00417  0.09774  0.48931 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 14.106344  11.295351   1.249    0.224
+Year        -0.006782   0.005618  -1.207    0.239
+
+Residual standard error: 0.2149 on 24 degrees of freedom
+Multiple R-squared:  0.05724,	Adjusted R-squared:  0.01796 
+F-statistic: 1.457 on 1 and 24 DF,  p-value: 0.2392
+
+
+$`145`
+
+Call:
+lm(formula = cement_ratio ~ Year, data = results_list[[s]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.4622 -0.1495 -0.0537  0.1233  0.6969 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)  5.320691  12.681214   0.420    0.678
+Year        -0.002236   0.006311  -0.354    0.726
+
+Residual standard error: 0.2697 on 26 degrees of freedom
+Multiple R-squared:  0.004807,	Adjusted R-squared:  -0.03347 
+F-statistic: 0.1256 on 1 and 26 DF,  p-value: 0.7259
+
+
+
+
+COMBINED MODEL
+====================================
+
+
+Call:
+lm(formula = cement_ratio ~ Year * Sample, data = all_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.51150 -0.12361 -0.03222  0.11271  0.69689 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)   
+(Intercept)     23.934239   8.082678   2.961  0.00355 **
+Year            -0.011820   0.004027  -2.935  0.00385 **
+Sample106      -21.115802  14.122583  -1.495  0.13691   
+Sample120       10.132155  13.137098   0.771  0.44173   
+Sample123        2.911506  14.706697   0.198  0.84333   
+Sample141       -9.827895  14.122583  -0.696  0.48754   
+Sample145      -18.613548  13.137098  -1.417  0.15854   
+Year:Sample106   0.010504   0.007028   1.495  0.13708   
+Year:Sample120  -0.004991   0.006541  -0.763  0.44656   
+Year:Sample123  -0.001465   0.007317  -0.200  0.84158   
+Year:Sample141   0.005038   0.007028   0.717  0.47456   
+Year:Sample145   0.009583   0.006541   1.465  0.14489   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2203 on 154 degrees of freedom
+Multiple R-squared:  0.5903,	Adjusted R-squared:  0.5611 
+F-statistic: 20.17 on 11 and 154 DF,  p-value: < 2.2e-16
+
+
+
+Analysis of Variance Table
+
+Response: cement_ratio
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+Year          1 0.8510 0.85100 17.5372 4.725e-05 ***
+Sample        5 9.5807 1.91614 39.4874 < 2.2e-16 ***
+Year:Sample   5 0.3361 0.06721  1.3851    0.2328    
+Residuals   154 7.4729 0.04853                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+MEAN MODEL
+====================================
+
+
+Call:
+lm(formula = mean_ratio ~ Year, data = mean_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.38173 -0.08792 -0.03173  0.10262  0.45675 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 15.172619   6.003744   2.527   0.0168 *
+Year        -0.007429   0.002991  -2.483   0.0186 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1636 on 31 degrees of freedom
+Multiple R-squared:  0.1659,	Adjusted R-squared:  0.139 
+F-statistic: 6.167 on 1 and 31 DF,  p-value: 0.01863
+
